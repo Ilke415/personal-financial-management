@@ -1,4 +1,5 @@
 namespace STIL.PersonalFinanceManager.UI.RoleCenters;
+using STIL.Util.QRCodeProcessor.UI;
 
 page 50100 "STI Personal Finance Mngr. RC"
 {
@@ -8,6 +9,13 @@ page 50100 "STI Personal Finance Mngr. RC"
 
     layout
     {
-
+        area(RoleCenter)
+        {
+            part("STI QR Code Processor"; "STI QR Code Processor")
+            {
+                Caption = 'Receipt Scanner';
+                ApplicationArea = All;
+            }
+        }
     }
 }
