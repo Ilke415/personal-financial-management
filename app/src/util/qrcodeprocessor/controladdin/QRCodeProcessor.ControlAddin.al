@@ -14,7 +14,8 @@ controladdin "STI QR Code Processor"
     VerticalStretch = true;
 
     event OnControlReady();
-    event OnScanQRCode(Args: JsonObject; Result: Text);
+    event OnStartQRCodeScan(Args: JsonObject; Result: JsonObject);
+    event OnFinishQRCodeScan(Args: JsonObject; Result: JsonObject);
     procedure InitiliazeUI();
-    procedure ScanQRCode(Args: JsonObject; Result: Text);
+    procedure ScanQRCode(Args: JsonObject; Result: JsonObject);
 }

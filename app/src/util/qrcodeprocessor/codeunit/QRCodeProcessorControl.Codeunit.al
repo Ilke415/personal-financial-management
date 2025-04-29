@@ -1,6 +1,7 @@
 namespace STIL.Util.QRCodeProcessor.Logic;
+
 using STIL.Util.QRCodeProcessor.ControlAddins;
-using STIL.Util.QRCodeProcessor.Intefaces;
+using STIL.Util.QRCodeProcessor.Interfaces;
 
 codeunit 50100 "STI QR Code Processor Control" implements "STI QR Code Processor"
 {
@@ -14,7 +15,7 @@ codeunit 50100 "STI QR Code Processor Control" implements "STI QR Code Processor
         Control := ControlIn;
     end;
 
-    internal procedure ScanQRCode(Args: JsonObject; var Result: Text);
+    internal procedure ScanQRCode(Args: JsonObject; var Result: JsonObject);
     begin
         Control.ScanQRCode(Args, Result);
     end;

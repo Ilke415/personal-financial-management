@@ -23,14 +23,14 @@ page 50101 "STI QR Code Processor"
                         QRCodeProcessor.OnControlReady(CurrPage."STI QR Code Processor");
                     end;
 
-                    trigger OnScanQRCode(Args: JsonObject; Result: Text)
-                    var
-                        Camera: Codeunit Camera;
-                        PictureBytes: InStream;
-                        PictureName: Text;
+                    trigger OnStartQRCodeScan(Args: JsonObject; Result: JsonObject)
                     begin
-                        Camera.GetPicture(PictureBytes, PictureName);
-                        QRCodeProcessor.ScanQRCode('', 100);
+                        QRCodeProcessor.StartQRCodeScan();
+                    end;
+
+                    trigger OnFinishQRCodeScan(Args: JsonObject; Result: JsonObject)
+                    begin
+                        QRCodeProcessor.ProcessReceiptFromUrl('');
                     end;
                 }
             }

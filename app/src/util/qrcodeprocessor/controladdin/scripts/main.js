@@ -16,9 +16,7 @@ function InitiliazeUI() {
 }
 
 function OnScanQRCodeImageClick() {
-  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanQRCode", [{}, 1]);
-  // await getQRCodeImage();
-  // await ScanQRCodeImage({ content: "Scan QR Code" }, null);
+  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnStartQRCodeScan", [{}, {}]);
 }
 
 async function ScanQRCodeImage(args, output) {

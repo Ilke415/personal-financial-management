@@ -1,6 +1,9 @@
 namespace STIL.Util.QRCodeProcessor.Logic;
-using STIL.Util.QRCodeProcessor.Intefaces;
+
+
+using STIL.Util.QRCodeProcessor.Interfaces;
 using STIL.Util.QRCodeProcessor.ControlAddins;
+
 codeunit 50104 "STI QR Code Processor Impl."
 {
     Access = Internal;
@@ -16,13 +19,13 @@ codeunit 50104 "STI QR Code Processor Impl."
         QRCodeProcessorControl.InitiliazeUI();
     end;
 
-    procedure ScanQRCode(DataToEncode: Text; Size: Integer) Result: Text
+    internal procedure ScanQRCode(ImageBase64Text: Text)
     var
         Args: JsonObject;
+        Result: JsonObject;
     begin
-        Args.Add('content', DataToEncode);
-        Args.Add('size', Size);
-
+        // Args.Add('content', ImageBase64Text);
+        Message('ImageBase64Text: %1', ImageBase64Text);
         Handler.ScanQRCode(Args, Result);
     end;
 
