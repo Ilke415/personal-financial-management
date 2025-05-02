@@ -1,5 +1,5 @@
 
-function InitiliazeUI() {
+function Initiliaze() {
   const controladdinContainer = document.querySelector("#controlAddIn");
   
   const  scanQRCodeImage = document.createElement("img");

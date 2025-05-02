@@ -1,18 +1,17 @@
-namespace STIL.Util.QRCodeProcessor.Processor.Logic;
-
+namespace STIL.Util.QRCodeProcessor.Scanner.Logic;
 
 using STIL.Util.QRCodeProcessor.Interfaces;
 using STIL.Util.QRCodeProcessor.ControlAddins;
 
-codeunit 50104 "STI QR Code Processor Impl."
+codeunit 50108 "STI QR Code Scanner Impl."
 {
     Access = Internal;
 
     var
         Handler: Interface "STI QR Code Processor";
-        QRCodeProcessorControl: Codeunit "STI QR Code Processor Control";
+        QRCodeProcessorControl: Codeunit "STI QR Code Scanner Control";
 
-    internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Processor")
+    internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Scanner")
     begin
         QRCodeProcessorControl.SetControl(Control);
         InitiliazeHandler(QRCodeProcessorControl);

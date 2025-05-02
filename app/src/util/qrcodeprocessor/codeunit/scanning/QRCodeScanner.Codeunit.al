@@ -1,19 +1,19 @@
-namespace STIL.Util.QRCodeProcessor.Processor.Logic;
+namespace STIL.Util.QRCodeProcessor.Scanner.Logic;
 
 using System.Text;
 using System.Device;
 using STIL.Util.QRCodeProcessor.ControlAddins;
 
-codeunit 50102 "STI QR Code Processor"
+codeunit 50106 "STI QR Code Scanner"
 {
     Access = Internal;
 
     var
-        QRCodeProcessorImpl: Codeunit "STI QR Code Processor Impl.";
+        QRCodeScannerImpl: Codeunit "STI QR Code Scanner Impl.";
 
-    internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Processor")
+    internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Scanner")
     begin
-        QRCodeProcessorImpl.OnControlReady(Control);
+        QRCodeScannerImpl.OnControlReady(Control);
     end;
 
     internal procedure StartQRCodeScan()
@@ -27,10 +27,7 @@ codeunit 50102 "STI QR Code Processor"
         if not Camera.GetPicture(PictureBytes, PictureName) then
             exit;
 
-        QRCodeProcessorImpl.ScanQRCode(Base64Convert.ToBase64(PictureBytes));
+        QRCodeScannerImpl.ScanQRCode(Base64Convert.ToBase64(PictureBytes));
     end;
 
-    internal procedure ProcessReceiptFromUrl(Url: Text)
-    begin
-    end;
 }

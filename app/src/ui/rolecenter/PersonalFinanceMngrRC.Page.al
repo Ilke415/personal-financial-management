@@ -11,7 +11,7 @@ page 50100 "STI Personal Finance Mngr. RC"
     {
         area(RoleCenter)
         {
-            part("STI QR Code Processor"; "STI QR Code Processor")
+            part("STI Receipt Scanner"; "STI Receipt Scanner")
             {
                 Caption = 'Receipt Scanner';
                 ApplicationArea = All;
