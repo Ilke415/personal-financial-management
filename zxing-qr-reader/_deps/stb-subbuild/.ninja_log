@@ -1,0 +1,21 @@
+# ninja log v6
+2	82	7678462804648481	stb-populate-prefix/src/stb-populate-stamp/stb-populate-mkdir	a8d6de2a8c189630
+2	82	7678462804648481	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-mkdir	a8d6de2a8c189630
+83	4219	7678462846004993	stb-populate-prefix/src/stb-populate-stamp/stb-populate-download	a335137743de
+83	4219	7678462846004993	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-download	a335137743de
+4220	5994	7678462846125349	stb-populate-prefix/src/stb-populate-stamp/stb-populate-update	5c10a819767cee2
+4220	5994	7678462846125349	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-update	5c10a819767cee2
+5994	6075	7678462864571376	stb-populate-prefix/src/stb-populate-stamp/stb-populate-patch	25238f38556989e6
+5994	6075	7678462864571376	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-patch	25238f38556989e6
+6076	6154	7678462865339189	stb-populate-prefix/src/stb-populate-stamp/stb-populate-configure	99351c1082ba2191
+6076	6154	7678462865339189	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-configure	99351c1082ba2191
+6154	6230	7678462866100702	stb-populate-prefix/src/stb-populate-stamp/stb-populate-build	e4f120b851cb8fc6
+6154	6230	7678462866100702	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-build	e4f120b851cb8fc6
+6230	6305	7678462866866264	stb-populate-prefix/src/stb-populate-stamp/stb-populate-install	409528c4477f0eb1
+6230	6305	7678462866866264	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-install	409528c4477f0eb1
+6305	6382	7678462867647528	stb-populate-prefix/src/stb-populate-stamp/stb-populate-test	7fc0a9d54648d7de
+6305	6382	7678462867647528	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-test	7fc0a9d54648d7de
+6383	6489	7678462868706108	CMakeFiles/stb-populate-complete	a75f71551297ce97
+6383	6489	7678462868706108	stb-populate-prefix/src/stb-populate-stamp/stb-populate-done	a75f71551297ce97
+6383	6489	7678462868706108	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/CMakeFiles/stb-populate-complete	a75f71551297ce97
+6383	6489	7678462868706108	C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/_deps/stb-subbuild/stb-populate-prefix/src/stb-populate-stamp/stb-populate-done	a75f71551297ce97

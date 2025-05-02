@@ -1,0 +1,14 @@
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/zxing.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/zxing_reader.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/zxing_writer.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/edit_cache.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/rebuild_cache.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/list_install_components.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/install.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/install/local.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/ZXing.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/edit_cache.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/rebuild_cache.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/list_install_components.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/install.dir
+C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/CMakeFiles/install/local.dir

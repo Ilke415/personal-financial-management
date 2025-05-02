@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/cmake_install.cmake",
+		"C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/ZXing/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

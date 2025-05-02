@@ -1,0 +1,486 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The target system is: Emscripten - 1 - x86
+      The host system is: Windows - 10.0.26100 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emcc.bat 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      shared:INFO: (Emscripten: Running sanity checks)
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out.js"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out.wasm"
+      
+      The C compiler identification could not be found in:
+        C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/4.0.1/CompilerIdC/a.out.js
+      
+      The C compiler identification is Clang, found in:
+        C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/4.0.1/CompilerIdC/a.out.wasm
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/em++.bat 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out.js"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out.wasm"
+      
+      The CXX compiler identification could not be found in:
+        C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/4.0.1/CompilerIdCXX/a.out.js
+      
+      The CXX compiler identification is Clang, found in:
+        C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/4.0.1/CompilerIdCXX/a.out.wasm
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-u5grat"
+      binary: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-u5grat"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-u5grat'
+        
+        Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_01c56
+        [1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat   -v -MD -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -MF CMakeFiles\\cmTC_01c56.dir\\CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr '--sysroot=C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot' -DEMSCRIPTEN -Xclang '-iwithsysroot/include\\fakesdl' -Xclang '-iwithsysroot/include\\compat' -v -MD -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -MF 'CMakeFiles\\cmTC_01c56.dir\\CMakeCCompilerABI.c.o.d' -oCMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -c 'C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c'
+        clang version 21.0.0git (https:/github.com/llvm/llvm-project 23e3cbb2e82b62586266116c8ab77ce68e412cf8)
+        Target: wasm32-unknown-emscripten
+        Thread model: posix
+        InstalledDir: C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\bin
+         (in-process)
+         "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\bin\\\\clang.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-u5grat" -v "-fcoverage-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-u5grat" -resource-dir "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_01c56.dir\\\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fignore-exceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -x c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
+        clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc
+        ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"\x0d
+        #include "..." search starts here:\x0d
+        #include <...> search starts here:\x0d
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\fakesdl\x0d
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat\x0d
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\lib\\clang\\21\\include\x0d
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d
+        End of search list.\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat  -v CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -o cmTC_01c56.js   && cd ."
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" --version
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_01c56.wasm CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten' '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib' -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr 'C:\\Users\\stefi\\AppData\\Local\\Temp\\tmp8lrzgepzlibemscripten_js_symbols.so' --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_01c56.wasm cmTC_01c56.wasm '--remove-section=.debug*' --remove-section=producers --remove-section=name\x0d
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/node/20.18.0_64bit/bin/node.exe" 'C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs' -\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+        end of search list found
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+        implicit include dirs: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-u5grat']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_01c56]
+        ignore line: [[1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat   -v -MD -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -MF CMakeFiles\\cmTC_01c56.dir\\CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr '--sysroot=C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot' -DEMSCRIPTEN -Xclang '-iwithsysroot/include\\fakesdl' -Xclang '-iwithsysroot/include\\compat' -v -MD -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -MF 'CMakeFiles\\cmTC_01c56.dir\\CMakeCCompilerABI.c.o.d' -oCMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -c 'C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c']
+        ignore line: [clang version 21.0.0git (https:/github.com/llvm/llvm-project 23e3cbb2e82b62586266116c8ab77ce68e412cf8)]
+        ignore line: [Target: wasm32-unknown-emscripten]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\bin\\\\clang.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-u5grat" -v "-fcoverage-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-u5grat" -resource-dir "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_01c56.dir\\\\CMakeCCompilerABI.c.o.d" -MT CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fignore-exceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -x c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"]
+        ignore line: [clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc]
+        ignore line: [ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"\x0d]
+        ignore line: [#include "..." search starts here:\x0d]
+        ignore line: [#include <...> search starts here:\x0d]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\fakesdl\x0d]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat\x0d]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\lib\\clang\\21\\include\x0d]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d]
+        ignore line: [End of search list.\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat  -v CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o -o cmTC_01c56.js   && cd ."]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" --version]
+        link line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_01c56.wasm CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten' '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib' -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr 'C:\\Users\\stefi\\AppData\\Local\\Temp\\tmp8lrzgepzlibemscripten_js_symbols.so' --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1]
+          arg [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_01c56.wasm] ==> ignore
+          arg [CMakeFiles/cmTC_01c56.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg ['-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten'] ==> ignore
+          arg ['-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib'] ==> ignore
+          arg [-lGL-getprocaddr] ==> lib [GL-getprocaddr]
+          arg [-lal] ==> lib [al]
+          arg [-lhtml5] ==> lib [html5]
+          arg [-lstubs-debug] ==> lib [stubs-debug]
+          arg [-lnoexit] ==> lib [noexit]
+          arg [-lc-debug] ==> lib [c-debug]
+          arg [-ldlmalloc-debug] ==> lib [dlmalloc-debug]
+          arg [-lcompiler_rt] ==> lib [compiler_rt]
+          arg [-lc++-noexcept] ==> lib [c++-noexcept]
+          arg [-lc++abi-debug-noexcept] ==> lib [c++abi-debug-noexcept]
+          arg [-lsockets] ==> lib [sockets]
+          arg [-mllvm] ==> ignore
+          arg [-combiner-global-alias-analysis=false] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-emscripten-sjlj] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-disable-lsr] ==> ignore
+          arg ['C:\\Users\\stefi\\AppData\\Local\\Temp\\tmp8lrzgepzlibemscripten_js_symbols.so'] ==> ignore
+          arg [--strip-debug] ==> ignore
+          arg [--export=emscripten_stack_get_end] ==> ignore
+          arg [--export=emscripten_stack_get_free] ==> ignore
+          arg [--export=emscripten_stack_get_base] ==> ignore
+          arg [--export=emscripten_stack_get_current] ==> ignore
+          arg [--export=emscripten_stack_init] ==> ignore
+          arg [--export=_emscripten_stack_alloc] ==> ignore
+          arg [--export=__wasm_call_ctors] ==> ignore
+          arg [--export=_emscripten_stack_restore] ==> ignore
+          arg [--export-if-defined=__start_em_asm] ==> ignore
+          arg [--export-if-defined=__stop_em_asm] ==> ignore
+          arg [--export-if-defined=__start_em_lib_deps] ==> ignore
+          arg [--export-if-defined=__stop_em_lib_deps] ==> ignore
+          arg [--export-if-defined=__start_em_js] ==> ignore
+          arg [--export-if-defined=__stop_em_js] ==> ignore
+          arg [--export-if-defined=main] ==> ignore
+          arg [--export-if-defined=__main_argc_argv] ==> ignore
+          arg [--export-if-defined=fflush] ==> ignore
+          arg [--export-table] ==> ignore
+          arg [-zstack-size=65536] ==> ignore
+          arg [--no-growable-memory] ==> ignore
+          arg [--initial-heap=16777216] ==> ignore
+          arg [--no-entry] ==> ignore
+          arg [--stack-first] ==> ignore
+          arg [--table-base=1] ==> ignore
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_01c56.wasm cmTC_01c56.wasm '--remove-section=.debug*' --remove-section=producers --remove-section=name\x0d]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/node/20.18.0_64bit/bin/node.exe" 'C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs' -\x0d]
+        ignore line: []
+        ignore line: []
+        implicit libs: [GL-getprocaddr;al;html5;stubs-debug;noexit;c-debug;dlmalloc-debug;compiler_rt;c++-noexcept;c++abi-debug-noexcept;sockets]
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-mt3d9x"
+      binary: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-mt3d9x"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-mt3d9x'
+        
+        Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_dd406
+        [1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat   -v -MD -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_dd406.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr '--sysroot=C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot' -DEMSCRIPTEN -Xclang '-iwithsysroot/include\\fakesdl' -Xclang '-iwithsysroot/include\\compat' -v -MD -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -MF 'CMakeFiles\\cmTC_dd406.dir\\CMakeCXXCompilerABI.cpp.o.d' -oCMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -c 'C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp'
+        clang version 21.0.0git (https:/github.com/llvm/llvm-project 23e3cbb2e82b62586266116c8ab77ce68e412cf8)
+        Target: wasm32-unknown-emscripten
+        Thread model: posix
+        InstalledDir: C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\bin
+         (in-process)
+         "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-mt3d9x" -v "-fcoverage-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-mt3d9x" -resource-dir "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_dd406.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -x c++ "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
+        clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc
+        ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten/c++/v1"
+        ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\fakesdl
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/c++/v1
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\lib\\clang\\21\\include
+         C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d
+        End of search list.\x0d
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat  -v CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_dd406.js   && cd ."
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" --version
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_dd406.wasm CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten' '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib' -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr 'C:\\Users\\stefi\\AppData\\Local\\Temp\\tmpd684zeyslibemscripten_js_symbols.so' --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_dd406.wasm cmTC_dd406.wasm '--remove-section=.debug*' --remove-section=producers --remove-section=name\x0d
+         "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/node/20.18.0_64bit/bin/node.exe" 'C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs' -\x0d
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include]
+          add: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+        end of search list found
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include]
+        collapse include dir [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include] ==> [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+        implicit include dirs: [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/fakesdl;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include/c++/v1;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/lib/clang/21/include;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cache/sysroot/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-mt3d9x']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_dd406]
+        ignore line: [[1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat   -v -MD -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles\\cmTC_dd406.dir\\CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang++.exe" -target wasm32-unknown-emscripten -fignore-exceptions -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr '--sysroot=C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot' -DEMSCRIPTEN -Xclang '-iwithsysroot/include\\fakesdl' -Xclang '-iwithsysroot/include\\compat' -v -MD -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -MF 'CMakeFiles\\cmTC_dd406.dir\\CMakeCXXCompilerABI.cpp.o.d' -oCMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -c 'C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp']
+        ignore line: [clang version 21.0.0git (https:/github.com/llvm/llvm-project 23e3cbb2e82b62586266116c8ab77ce68e412cf8)]
+        ignore line: [Target: wasm32-unknown-emscripten]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\bin\\\\clang++.exe" -cc1 -triple wasm32-unknown-emscripten -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=none -ffp-contract=on -fno-rounding-math -mconstructor-aliases -target-cpu generic -fvisibility=hidden -debugger-tuning=gdb "-fdebug-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-mt3d9x" -v "-fcoverage-compilation-dir=C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\Business Central\\\\personal-financial-management\\\\wasm-qr-code-reader-lib\\\\zxing-qr-reader\\\\CMakeFiles\\\\CMakeScratch\\\\TryCompile-mt3d9x" -resource-dir "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21" -dependency-file "CMakeFiles\\\\cmTC_dd406.dir\\\\CMakeCXXCompilerABI.cpp.o.d" -MT CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D EMSCRIPTEN -isysroot "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten/c++/v1" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/c++/v1" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\lib\\\\clang\\\\21\\\\include" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include/wasm32-emscripten" -internal-isystem "C:\\\\Users\\\\stefi\\\\OneDrive\\\\Documents\\\\Projects\\\\emsdk\\\\upstream\\\\emscripten\\\\cache\\\\sysroot/include" -fdeprecated-macro -ferror-limit 19 -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fignore-exceptions -fexceptions "-iwithsysroot/include\\\\fakesdl" "-iwithsysroot/include\\\\compat" -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -o CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -x c++ "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [clang -cc1 version 21.0.0git based upon LLVM 21.0.0git default target x86_64-pc-windows-msvc]
+        ignore line: [ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten/c++/v1"]
+        ignore line: [ignoring nonexistent directory "C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/wasm32-emscripten"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\fakesdl]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\\compat]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include/c++/v1]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\lib\\clang\\21\\include]
+        ignore line: [ C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot/include\x0d]
+        ignore line: [End of search list.\x0d]
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat  -v CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_dd406.js   && cd ."]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\clang.exe" --version]
+        link line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe" -o cmTC_dd406.wasm CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten' '-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib' -lGL-getprocaddr -lal -lhtml5 -lstubs-debug -lnoexit -lc-debug -ldlmalloc-debug -lcompiler_rt -lc++-noexcept -lc++abi-debug-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr 'C:\\Users\\stefi\\AppData\\Local\\Temp\\tmpd684zeyslibemscripten_js_symbols.so' --strip-debug --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_get_current --export=emscripten_stack_init --export=_emscripten_stack_alloc --export=__wasm_call_ctors --export=_emscripten_stack_restore --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_lib_deps --export-if-defined=__stop_em_lib_deps --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=main --export-if-defined=__main_argc_argv --export-if-defined=fflush --export-table -z stack-size=65536 --no-growable-memory --initial-heap=16777216 --no-entry --stack-first --table-base=1]
+          arg [C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\wasm-ld.exe] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_dd406.wasm] ==> ignore
+          arg [CMakeFiles/cmTC_dd406.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg ['-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\cache\\sysroot\\lib\\wasm32-emscripten'] ==> ignore
+          arg ['-LC:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\src\\lib'] ==> ignore
+          arg [-lGL-getprocaddr] ==> lib [GL-getprocaddr]
+          arg [-lal] ==> lib [al]
+          arg [-lhtml5] ==> lib [html5]
+          arg [-lstubs-debug] ==> lib [stubs-debug]
+          arg [-lnoexit] ==> lib [noexit]
+          arg [-lc-debug] ==> lib [c-debug]
+          arg [-ldlmalloc-debug] ==> lib [dlmalloc-debug]
+          arg [-lcompiler_rt] ==> lib [compiler_rt]
+          arg [-lc++-noexcept] ==> lib [c++-noexcept]
+          arg [-lc++abi-debug-noexcept] ==> lib [c++abi-debug-noexcept]
+          arg [-lsockets] ==> lib [sockets]
+          arg [-mllvm] ==> ignore
+          arg [-combiner-global-alias-analysis=false] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-emscripten-sjlj] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-disable-lsr] ==> ignore
+          arg ['C:\\Users\\stefi\\AppData\\Local\\Temp\\tmpd684zeyslibemscripten_js_symbols.so'] ==> ignore
+          arg [--strip-debug] ==> ignore
+          arg [--export=emscripten_stack_get_end] ==> ignore
+          arg [--export=emscripten_stack_get_free] ==> ignore
+          arg [--export=emscripten_stack_get_base] ==> ignore
+          arg [--export=emscripten_stack_get_current] ==> ignore
+          arg [--export=emscripten_stack_init] ==> ignore
+          arg [--export=_emscripten_stack_alloc] ==> ignore
+          arg [--export=__wasm_call_ctors] ==> ignore
+          arg [--export=_emscripten_stack_restore] ==> ignore
+          arg [--export-if-defined=__start_em_asm] ==> ignore
+          arg [--export-if-defined=__stop_em_asm] ==> ignore
+          arg [--export-if-defined=__start_em_lib_deps] ==> ignore
+          arg [--export-if-defined=__stop_em_lib_deps] ==> ignore
+          arg [--export-if-defined=__start_em_js] ==> ignore
+          arg [--export-if-defined=__stop_em_js] ==> ignore
+          arg [--export-if-defined=main] ==> ignore
+          arg [--export-if-defined=__main_argc_argv] ==> ignore
+          arg [--export-if-defined=fflush] ==> ignore
+          arg [--export-table] ==> ignore
+          arg [-zstack-size=65536] ==> ignore
+          arg [--no-growable-memory] ==> ignore
+          arg [--initial-heap=16777216] ==> ignore
+          arg [--no-entry] ==> ignore
+          arg [--stack-first] ==> ignore
+          arg [--table-base=1] ==> ignore
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/bin\\llvm-objcopy.exe" cmTC_dd406.wasm cmTC_dd406.wasm '--remove-section=.debug*' --remove-section=producers --remove-section=name\x0d]
+        ignore line: [ "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/node/20.18.0_64bit/bin/node.exe" 'C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\tools\\compiler.mjs' -\x0d]
+        ignore line: []
+        ignore line: []
+        implicit libs: [GL-getprocaddr;al;html5;stubs-debug;noexit;c-debug;dlmalloc-debug;compiler_rt;c++-noexcept;c++abi-debug-noexcept;sockets]
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "C:/Users/stefi/OneDrive/Documents/Projects/zxing-cpp/core/CMakeLists.txt:83 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test HAS_FILE_PREFIX_ARG"
+    directories:
+      source: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-s2cjff"
+      binary: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-s2cjff"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "HAS_FILE_PREFIX_ARG"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-s2cjff'
+        
+        Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_1acbd
+        [1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat -DHAS_FILE_PREFIX_ARG  -std=gnu++20   -fmacro-prefix-map=C:/Users/stefi/OneDrive/Documents/Projects/zxing-cpp/core/= -MD -MT CMakeFiles/cmTC_1acbd.dir/src.cxx.o -MF CMakeFiles\\cmTC_1acbd.dir\\src.cxx.o.d -o CMakeFiles/cmTC_1acbd.dir/src.cxx.o -c "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-s2cjff/src.cxx"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_1acbd.dir/src.cxx.o -o cmTC_1acbd.js   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/stefi/OneDrive/Documents/Projects/zxing-cpp/core/CMakeLists.txt:492 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xmhs0e"
+      binary: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xmhs0e"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xmhs0e'
+        
+        Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_47d81
+        [1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_47d81.dir/src.c.o -MF CMakeFiles\\cmTC_47d81.dir\\src.c.o.d -o CMakeFiles/cmTC_47d81.dir/src.c.o -c "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xmhs0e/src.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\emcc.bat   CMakeFiles/cmTC_47d81.dir/src.c.o -o cmTC_47d81.js   && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake:55 (cmake_check_compiler_flag)"
+      - "C:/Users/stefi/OneDrive/Documents/Projects/zxing-cpp/core/CMakeLists.txt:574 (check_cxx_compiler_flag)"
+    checks:
+      - "Performing Test COMPILER_KNOWS_Os"
+    directories:
+      source: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xzcs4l"
+      binary: "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xzcs4l"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/emscan-deps"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules;C:/Users/stefi/OneDrive/Documents/Projects/emsdk/upstream/emscripten/cmake/Modules"
+    buildResult:
+      variable: "COMPILER_KNOWS_Os"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xzcs4l'
+        
+        Run Build Command(s): C:/Users/stefi/AppData/Local/Microsoft/WinGet/Links/ninja.exe -v cmTC_77052
+        [1/2] C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat -DCOMPILER_KNOWS_Os  -std=gnu++20   -Os -MD -MT CMakeFiles/cmTC_77052.dir/src.cxx.o -MF CMakeFiles\\cmTC_77052.dir\\src.cxx.o.d -o CMakeFiles/cmTC_77052.dir/src.cxx.o -c "C:/Users/stefi/OneDrive/Documents/Projects/Business Central/personal-financial-management/wasm-qr-code-reader-lib/zxing-qr-reader/CMakeFiles/CMakeScratch/TryCompile-xzcs4l/src.cxx"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\stefi\\OneDrive\\Documents\\Projects\\emsdk\\upstream\\emscripten\\em++.bat   CMakeFiles/cmTC_77052.dir/src.cxx.o -o cmTC_77052.js   && cd ."
+        
+      exitCode: 0
+...
