@@ -1,72 +1,56 @@
+var canvasInterval = window.setInterval(() => {
+  processFrame();
+}, 1000 / 60);
+
 
 function Initiliaze() {
-  debugger;
-  alert('hi');
-  const controladdinContainer = document.querySelector("#controlAddIn");
-  var zxing = ZXing().then(function (instance) {
-    zxing = instance; // this line is supposedly not required but with current emsdk it is :-/
-  });
+    const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
+    const video = videoContainer.querySelector("video");
+    video.style.visibility = "hidden";
+    video.style.width = "0px";
+    video.style.height = "0px";
+    const canvas = document.createElement('canvas');
+    canvas.id = "stil-canvas";
+    canvas.width = 400;
+    canvas.height = 300;
+    videoContainer.appendChild(canvas);
 
-  const cameraSelector = document.getElementById("cameraSelector");
-  const format = document.getElementById("format");
-  const mode = document.getElementById("mode");
-  const canvas = document.getElementById("canvas");
-  const resultElement = document.getElementById("result");
-
-  const ctx = canvas.getContext("2d", { willReadFrequently: true });
-  const video = document.createElement("video");
-  video.setAttribute("id", "video");
-  video.setAttribute("width", canvas.width);
-  video.setAttribute("height", canvas.height);
-  video.setAttribute("autoplay", "");
-
-  cameraSelector.addEventListener("change", function () {
-    updateVideoStream(this.value);
-  });
-
-
-  updateVideoStream();
+        video.onpause = function() {
+          clearInterval(canvasInterval);
+        };
+        video.onended = function() {
+          clearInterval(canvasInterval);
+        };
+        video.onplay = function() {
+          clearInterval(canvasInterval);
+          canvasInterval = window.setInterval(() => {
+           processFrame();
+          }, 1000 / 60);
+        };
 }
-
-
-function updateVideoStream (deviceId) {
-  // To ensure the camera switch, it is advisable to free up the media resources
-  if (video.srcObject) video.srcObject.getTracks().forEach(track => track.stop());
-
-  navigator.mediaDevices
-    .getUserMedia({ video: { facingMode: deviceId }, audio: false })
-    .then(function (stream) {
-      video.srcObject = stream;
-      video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-      video.play();
-      processFrame();
-    })
-    .catch(function (error) {
-      console.error("Error accessing camera:", error);
-    });
-};
 
 function processFrame () {
-  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-  const code = readBarcodeFromCanvas(canvas, format.value, mode.value === 'true');
-  if (code.format) {
-    resultElement.innerText = code.format + ": " + escapeTags(code.text);
-    drawResult(code)
-  } else {
-    resultElement.innerText = "No barcode found";
-  }
-  requestAnimationFrame(processFrame);
+  // debugger;
+  const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
+  const video = videoContainer.querySelector("video");
+  if (video === null) return;
+  const canvas = videoContainer.querySelector("#stil-canvas");
+  const ctx = canvas.getContext("2d", { alpha: false });
+    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // const code = await readBarcodeFromCanvas(canvas);
+  // if (code.format) {
+  //   alert(code.format + ": " + escapeTags(code.text));
+  //   drawResult(code, ctx);
+  // } else {
+  //   console.log("No barcode found");
+  // }
+  requestAnimationFrame(processFrame());
 }
 
-function drawResult(code) {
+function drawResult(code, ctx) {
   ctx.beginPath();
   ctx.lineWidth = 4;
   ctx.strokeStyle = "red";
-  // ctx.textAlign = "center";
-  // ctx.fillStyle = "#green"
-  // ctx.font = "25px Arial";
-  // ctx.fontWeight = "bold";
   with (code.position) {
     ctx.moveTo(topLeft.x, topLeft.y);
     ctx.lineTo(topRight.x, topRight.y);
@@ -74,11 +58,18 @@ function drawResult(code) {
     ctx.lineTo(bottomLeft.x, bottomLeft.y);
     ctx.lineTo(topLeft.x, topLeft.y);
     ctx.stroke();
-    // ctx.fillText(code.text, (topLeft.x + bottomRight.x) / 2, (topLeft.y + bottomRight.y) / 2);
   }
 }
 
-function readBarcodeFromCanvas(canvas, format, mode) {
+async function readBarcodeFromCanvas(canvas) {
+  debugger;
+  var zxing = ZXing().then(function (instance) {
+    zxing = instance; // this line is supposedly not required but with current emsdk it is :-/
+  });
+  // const bitmap = await createImageBitmap(video);
+  return;
+  var _malloc = zxing._malloc;
+
   var imgWidth = canvas.width;
   var imgHeight = canvas.height;
   var imageData = canvas.getContext('2d').getImageData(0, 0, imgWidth, imgHeight);
@@ -86,9 +77,9 @@ function readBarcodeFromCanvas(canvas, format, mode) {
 
   if (zxing != null) {
     var buffer = zxing._malloc(sourceBuffer.byteLength);
-    zxing.HEAPU8.set(sourceBuffer, buffer);
-    var result = zxing.readBarcodeFromPixmap(buffer, imgWidth, imgHeight, mode, format);
-    zxing._free(buffer);
+		zxing.HEAPU8.set(sourceBuffer, buffer);
+		var result = zxing.readBarcodeFromPixmap(buffer, imgWidth, imgHeight, true, "");
+		zxing._free(buffer);
     return result;
   } else {
     return { error: "ZXing not yet initialized" };
