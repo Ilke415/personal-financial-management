@@ -1,12 +1,4 @@
-#controlAddIn{
-  display: flex;
-}
-
-#controlAddIn > img{
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-#scanQRCodeImage {
-  margin-right: 10px;
+#stil-main-video-container {
+  max-width: 640px !important;
+  max-height: 480px !important;
 }
