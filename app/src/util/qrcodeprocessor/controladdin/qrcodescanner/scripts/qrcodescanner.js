@@ -2,7 +2,6 @@ var canvasInterval = window.setInterval(() => {
   processFrame();
 }, 1000 / 60);
 
-
 function Initiliaze() {
     const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
     const video = videoContainer.querySelector("video");
