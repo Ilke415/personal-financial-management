@@ -1,8 +1,8 @@
-namespace STIL.Util.QRCodeProcessor.UI;
+namespace STIL.PersonalFinanceManager.Util.UI;
 
 using System.Device;
-using STIL.Util.QRCodeProcessor.ControlAddins;
-using STIL.Util.QRCodeProcessor.Scanner.Logic;
+using STIL.PersonalFinanceManager.Util.AddIns;
+using STIL.PersonalFinanceManager.Util.QRCode.Scanner;
 
 pageextension 50100 "STI Camera" extends Camera
 {
@@ -20,11 +20,23 @@ pageextension 50100 "STI Camera" extends Camera
                     begin
                         QRCodeScanner.OnControlReady(CurrPage."STI QR Code Scanner");
                     end;
+
+                    trigger OnFinishQRCodeScan(Result: JsonObject)
+                    begin
+                        ScanResult := Result;
+                        CurrPage.Close();
+                    end;
                 }
             }
         }
     }
 
+    internal procedure STILGetScanResult(ScanResultOut: JsonObject)
+    begin
+        ScanResultOut := ScanResult;
+    end;
+
     var
         QRCodeScanner: Codeunit "STI QR Code Scanner";
+        ScanResult: JsonObject;
 }

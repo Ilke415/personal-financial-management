@@ -1,17 +1,17 @@
-namespace STIL.Util.QRCodeProcessor.Processor.Logic;
+namespace STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 
 using System.Text;
 using System.Device;
-using STIL.Util.QRCodeProcessor.ControlAddins;
+using STIL.PersonalFinanceManager.Util.AddIns;
 
-codeunit 50102 "STI QR Code Processor"
+codeunit 50102 "STI Receipt Scanner"
 {
     Access = Internal;
 
     var
-        QRCodeProcessorImpl: Codeunit "STI QR Code Processor Impl.";
+        QRCodeProcessorImpl: Codeunit "STI Receipt Scanner Impl.";
 
-    internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Processor")
+    internal procedure OnControlReady(Control: ControlAddIn "STI Receipt Scanner")
     begin
         QRCodeProcessorImpl.OnControlReady(Control);
     end;
@@ -24,6 +24,7 @@ codeunit 50102 "STI QR Code Processor"
         PictureName: Text;
         CameraPage: Page Camera;
     begin
+        // TODO: Create your own camera page and use it here instead of the default one.
         if not Camera.GetPicture(PictureBytes, PictureName) then
             exit;
 

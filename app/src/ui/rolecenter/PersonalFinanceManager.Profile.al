@@ -1,4 +1,4 @@
-namespace STIL.PersonalFinanceManager.UI.RoleCenters;
+namespace STIL.PersonalFinanceManager.UI;
 
 profile "STI Personal Finance Manager"
 {

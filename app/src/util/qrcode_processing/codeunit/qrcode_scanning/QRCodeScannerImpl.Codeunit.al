@@ -1,14 +1,14 @@
-namespace STIL.Util.QRCodeProcessor.Scanner.Logic;
+namespace STIL.PersonalFinanceManager.Util.QRCode.Scanner;
 
-using STIL.Util.QRCodeProcessor.Interfaces;
-using STIL.Util.QRCodeProcessor.ControlAddins;
+using STIL.PersonalFinanceManager.Util.Abstractions;
+using STIL.PersonalFinanceManager.Util.AddIns;
 
 codeunit 50108 "STI QR Code Scanner Impl."
 {
     Access = Internal;
 
     var
-        Handler: Interface "STI QR Code Processor";
+        Handler: Interface "STI IUIRequestHandler";
         QRCodeProcessorControl: Codeunit "STI QR Code Scanner Control";
 
     internal procedure OnControlReady(Control: ControlAddIn "STI QR Code Scanner")
@@ -25,10 +25,10 @@ codeunit 50108 "STI QR Code Scanner Impl."
     begin
         // Args.Add('content', ImageBase64Text);
         Message('ImageBase64Text: %1', ImageBase64Text);
-        Handler.ScanQRCode(Args, Result);
+        Handler.HandleRequest(Args, Result);
     end;
 
-    local procedure InitiliazeHandler(HandlerIn: Interface "STI QR Code Processor")
+    local procedure InitiliazeHandler(HandlerIn: Interface "STI IUIRequestHandler")
     begin
         Handler := HandlerIn;
     end;

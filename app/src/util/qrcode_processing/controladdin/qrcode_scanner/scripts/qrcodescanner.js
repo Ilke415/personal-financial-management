@@ -4,14 +4,16 @@ var canvasInterval = window.setInterval(() => {
 
 function Initiliaze() {
     const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
+    const mainContainer = window.parent.document.querySelector(".dialog-width--MW3AOZjYCBwGKFJx7NkN");
+    mainContainer.setAttribute("id", "stil-main-container");
     const video = videoContainer.querySelector("video");
     video.style.visibility = "hidden";
     video.style.width = "0px";
     video.style.height = "0px";
     const canvas = document.createElement('canvas');
     canvas.id = "stil-canvas";
-    canvas.width = 400;
-    canvas.height = 220;
+    canvas.width = 640;
+    canvas.height = 480;
     videoContainer.appendChild(canvas);
 
     video.onpause = function() {
@@ -26,6 +28,7 @@ function Initiliaze() {
         processFrame();
       }, 1000 / 60);
     };
+    AddCssRulesToAllStyleSheets();
 }
 
 function processFrame () {
@@ -39,7 +42,7 @@ function processFrame () {
   readBarcodeFromCanvas(canvas).then(result => {
     if (result.format) {
       alert(result.format + ": " + escapeTags(result.text));
-      drawResult(result, ctx);
+      // drawResult(result, ctx);
     }
   });
 }
@@ -78,4 +81,22 @@ function readBarcodeFromCanvas(canvas) {
 
 function escapeTags(htmlStr) {
   return htmlStr.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+}
+
+function AddCssRulesToAllStyleSheets() {
+  debugger;
+  let currentSheet = null;
+
+  for (let i = 0; i < window.parent.document.styleSheets.length; i++) {
+    currentSheet = window.parent.document.styleSheets[i];
+    try {
+      currentSheet.insertRule(
+        "#stil-main-container { max-width: 700px !important; max-height: 480px !important; width: 700px !important; height: 480% !important; }",
+        0
+      );
+    }
+    catch (e) {
+      console.warn("Unable to insert rule into stylesheet: ", e);
+    }
+  }
 }

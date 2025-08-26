@@ -1,7 +1,6 @@
-namespace STIL.Util.QRCodeProcessor.UI;
-using System.Device;
-using STIL.Util.QRCodeProcessor.ControlAddins;
-using STIL.Util.QRCodeProcessor.Processor.Logic;
+namespace STIL.PersonalFinanceManager.Util.UI;
+using STIL.PersonalFinanceManager.Util.AddIns;
+using STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 
 page 50101 "STI Receipt Scanner"
 {
@@ -16,15 +15,16 @@ page 50101 "STI Receipt Scanner"
             group(General)
             {
                 Caption = '';
-                usercontrol("STI QR Code Processor"; "STI QR Code Processor")
+                usercontrol("STI Receipt Scanner"; "STI Receipt Scanner")
                 {
                     trigger OnControlReady()
                     begin
-                        QRCodeProcessor.OnControlReady(CurrPage."STI QR Code Processor");
+                        QRCodeProcessor.OnControlReady(CurrPage."STI Receipt Scanner");
                     end;
 
                     trigger OnStartQRCodeScan(Args: JsonObject; Result: JsonObject)
                     begin
+                        // TODO: Add additional enum parameter to determine if the scan is for a QR code or URL
                         QRCodeProcessor.StartQRCodeScan();
                     end;
 
@@ -37,5 +37,5 @@ page 50101 "STI Receipt Scanner"
         }
     }
     var
-        QRCodeProcessor: Codeunit "STI QR Code Processor";
+        QRCodeProcessor: Codeunit "STI Receipt Scanner";
 }

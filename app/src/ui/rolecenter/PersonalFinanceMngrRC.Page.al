@@ -1,5 +1,6 @@
-namespace STIL.PersonalFinanceManager.UI.RoleCenters;
-using STIL.Util.QRCodeProcessor.UI;
+namespace STIL.PersonalFinanceManager.UI;
+
+using STIL.PersonalFinanceManager.Util.UI;
 
 page 50100 "STI Personal Finance Mngr. RC"
 {

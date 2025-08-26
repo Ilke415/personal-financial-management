@@ -1,9 +1,9 @@
-namespace STIL.Util.QRCodeProcessor.Scanner.Logic;
+namespace STIL.PersonalFinanceManager.Util.QRCode.Scanner;
 
-using STIL.Util.QRCodeProcessor.ControlAddins;
-using STIL.Util.QRCodeProcessor.Interfaces;
+using STIL.PersonalFinanceManager.Util.AddIns;
+using STIL.PersonalFinanceManager.Util.Abstractions;
 
-codeunit 50107 "STI QR Code Scanner Control" implements "STI QR Code Processor"
+codeunit 50107 "STI QR Code Scanner Control" implements "STI IUIRequestHandler"
 {
     Access = Internal;
 
@@ -15,7 +15,7 @@ codeunit 50107 "STI QR Code Scanner Control" implements "STI QR Code Processor"
         Control := ControlIn;
     end;
 
-    internal procedure ScanQRCode(Args: JsonObject; var Result: JsonObject)
+    internal procedure HandleRequest(Args: JsonObject; var Result: JsonObject)
     begin
     end;
 
