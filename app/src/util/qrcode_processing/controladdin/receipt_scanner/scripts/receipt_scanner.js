@@ -1,10 +1,13 @@
-
 function Initiliaze() {
   const controladdinContainer = document.querySelector("#controlAddIn");
-  
-  const  scanQRCodeImage = document.createElement("img");
-  scanQRCodeImage.setAttribute("src", `${Microsoft.Dynamics.NAV.GetImageResource(
-    "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/qr-code-scanner-icon.jpg")}`);
+
+  const scanQRCodeImage = document.createElement("img");
+  scanQRCodeImage.setAttribute(
+    "src",
+    `${Microsoft.Dynamics.NAV.GetImageResource(
+      "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/qr-code-scanner-icon.jpg"
+    )}`
+  );
   scanQRCodeImage.setAttribute("height", "75");
   scanQRCodeImage.setAttribute("id", "scanQRCodeImage");
   scanQRCodeImage.setAttribute("width", "75");
@@ -12,9 +15,13 @@ function Initiliaze() {
   scanQRCodeImage.addEventListener("click", OnScanFromImagesClick, false);
   controladdinContainer.appendChild(scanQRCodeImage);
 
-  const  scanFromURLImage = document.createElement("img");
-  scanFromURLImage.setAttribute("src", `${Microsoft.Dynamics.NAV.GetImageResource(
-    "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/url-icon.jpg")}`);
+  const scanFromURLImage = document.createElement("img");
+  scanFromURLImage.setAttribute(
+    "src",
+    `${Microsoft.Dynamics.NAV.GetImageResource(
+      "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/url-icon.jpg"
+    )}`
+  );
   scanFromURLImage.setAttribute("height", "75");
   scanFromURLImage.setAttribute("id", "scanFromURLImage");
   scanFromURLImage.setAttribute("width", "75");
@@ -24,5 +31,8 @@ function Initiliaze() {
 }
 
 function OnScanFromImagesClick() {
-  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestStart", [{}, {}]);
+  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestStart", [
+    {},
+    {},
+  ]);
 }

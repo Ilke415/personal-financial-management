@@ -3,49 +3,62 @@ var canvasInterval = window.setInterval(() => {
 }, 1000 / 60);
 
 function Initiliaze() {
-    const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
-    const mainContainer = window.parent.document.querySelector(".dialog-width--MW3AOZjYCBwGKFJx7NkN");
-    mainContainer.setAttribute("id", "stil-main-container");
-    const video = videoContainer.querySelector("video");
-    video.style.visibility = "hidden";
-    video.style.width = "0px";
-    video.style.height = "0px";
-    const canvas = document.createElement('canvas');
-    canvas.id = "stil-canvas";
-    canvas.width = 640;
-    canvas.height = 480;
-    videoContainer.appendChild(canvas);
+  const videoContainer = window.parent.document.querySelector(
+    ".react-html5-camera-photo"
+  );
+  const mainContainer = window.parent.document.querySelector(
+    ".dialog-width--MW3AOZjYCBwGKFJx7NkN"
+  );
+  mainContainer.setAttribute("id", "stil-main-container");
+  const video = videoContainer.querySelector("video");
+  video.style.visibility = "hidden";
+  video.style.width = "0px";
+  video.style.height = "0px";
+  const canvas = document.createElement("canvas");
+  canvas.id = "stil-canvas";
+  canvas.width = 640;
+  canvas.height = 480;
+  videoContainer.appendChild(canvas);
 
-    video.onpause = function() {
-      clearInterval(canvasInterval);
-    };
-    video.onended = function() {
-      clearInterval(canvasInterval);
-    };
-    video.onplay = function() {
-      clearInterval(canvasInterval);
-      canvasInterval = window.setInterval(() => {
-        processFrame();
-      }, 1000 / 60);
-    };
-    AddCssRulesToAllStyleSheets();
+  video.onpause = function () {
+    clearInterval(canvasInterval);
+  };
+  video.onended = function () {
+    clearInterval(canvasInterval);
+  };
+  video.onplay = function () {
+    clearInterval(canvasInterval);
+    canvasInterval = window.setInterval(() => {
+      processFrame();
+    }, 1000 / 60);
+  };
+  AddCssRulesToAllStyleSheets();
 }
 
-function processFrame () {
-  const videoContainer = window.parent.document.querySelector(".react-html5-camera-photo");
+function processFrame() {
+  const videoContainer = window.parent.document.querySelector(
+    ".react-html5-camera-photo"
+  );
   const video = videoContainer.querySelector("video");
   if (video === null) return;
   const canvas = videoContainer.querySelector("#stil-canvas");
   if (canvas === null) return;
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  readBarcodeFromCanvas(canvas).then(async result => {
+  readBarcodeFromCanvas(canvas).then(async (result) => {
     if (result.content.format) {
-      const args = { format: result.content.format, content: escapeTags(result.content.text) , imageData: result.imageData};
+      const args = {
+        format: result.content.format,
+        content: escapeTags(result.content.text),
+        imageData: result.imageData,
+      };
       const video = videoContainer.querySelector("video");
       video.pause();
       drawResult(result.content, ctx);
-      await Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestFinish", [args]);
+      await Microsoft.Dynamics.NAV.InvokeExtensibilityMethod(
+        "OnScanRequestFinish",
+        [args]
+      );
     }
   });
 }
@@ -67,14 +80,22 @@ function drawResult(code, ctx) {
 function readBarcodeFromCanvas(canvas) {
   var imgWidth = canvas.width;
   var imgHeight = canvas.height;
-  var imageData = canvas.getContext("2d", { willReadFrequently: true }).getImageData(0, 0, imgWidth, imgHeight);
-  const base64Canvas = canvas.toDataURL("image/jpeg").split(';base64,')[1];
+  var imageData = canvas
+    .getContext("2d", { willReadFrequently: true })
+    .getImageData(0, 0, imgWidth, imgHeight);
+  const base64Canvas = canvas.toDataURL("image/jpeg").split(";base64,")[1];
   var sourceBuffer = imageData.data;
   return ZXing().then(function (zxing) {
     if (zxing) {
       var buffer = zxing._malloc(sourceBuffer.byteLength);
       zxing.HEAPU8.set(sourceBuffer, buffer);
-      var result = zxing.readBarcodeFromPixmap(buffer, imgWidth, imgHeight, true, "");
+      var result = zxing.readBarcodeFromPixmap(
+        buffer,
+        imgWidth,
+        imgHeight,
+        true,
+        ""
+      );
       zxing._free(buffer);
       return { content: result, imageData: base64Canvas };
     } else {
@@ -84,7 +105,12 @@ function readBarcodeFromCanvas(canvas) {
 }
 
 function escapeTags(htmlStr) {
-  return htmlStr.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  return htmlStr
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function AddCssRulesToAllStyleSheets() {
@@ -98,8 +124,7 @@ function AddCssRulesToAllStyleSheets() {
         "#stil-main-container { max-width: 700px !important; max-height: 480px !important; width: 700px !important; height: 480% !important; }",
         0
       );
-    }
-    catch (e) {
+    } catch (e) {
       console.warn("Unable to insert rule into stylesheet: ", e);
     }
   }
