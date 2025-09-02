@@ -14,7 +14,6 @@ page 50102 "STI Receipt Scan Audit Log"
         {
             repeater(General)
             {
-
                 field(SystemId; Rec.SystemId) { }
                 field(Status; Rec.Status) { StyleExpr = StatusStyle; }
                 field("Document No."; Rec."Document No.") { }
@@ -27,7 +26,6 @@ page 50102 "STI Receipt Scan Audit Log"
     begin
         StatusStyle := GetStatusStyleExpr();
     end;
-
 
     internal procedure GetStatusStyleExpr(): Text
     var

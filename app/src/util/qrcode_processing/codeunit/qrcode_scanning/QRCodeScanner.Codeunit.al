@@ -1,6 +1,5 @@
 namespace STIL.PersonalFinanceManager.Util.QRCode.Scanner;
 
-
 using STIL.PersonalFinanceManager.Util.AddIns;
 using STIL.PersonalFinanceManager.Helper;
 using STIL.PersonalFinanceManager.Archive;
