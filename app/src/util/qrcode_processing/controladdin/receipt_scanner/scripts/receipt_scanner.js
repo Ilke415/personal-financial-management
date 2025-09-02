@@ -31,8 +31,16 @@ function Initiliaze() {
 }
 
 function OnScanFromImagesClick() {
+  debugger;
+  let actionId;
+  if (this.id === "scanQRCodeImage") {
+    actionId = 0;
+  } else if (this.id === "scanFromURLImage") {
+    actionId = 1;
+  }
+
   Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestStart", [
-    {},
+    { actionId: actionId },
     {},
   ]);
 }

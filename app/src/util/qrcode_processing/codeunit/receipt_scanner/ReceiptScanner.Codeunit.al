@@ -1,6 +1,6 @@
 namespace STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 
-using System.Text;
+using STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 using System.Device;
 using STIL.PersonalFinanceManager.Util.AddIns;
 using STIL.PersonalFinanceManager.Archive;
@@ -18,32 +18,28 @@ codeunit 50102 "STI Receipt Scanner"
         ReceiptScannerImpl.OnControlReady(Control);
     end;
 
-    internal procedure ProcessReceiptScan()
+    internal procedure ProcessReceiptScan(ActionArgs: JsonObject)
     var
-        ReceiptScanSessionLog: Record "STI Receipt Scan Session Log";
+        STIIReceiptScanActionProvider: Interface STIIReceiptScanActionProvider;
+        ReceiptScanAction: Enum "STI Receipt Scan Action";
+    begin
+        if not ActionArgs.Contains('actionId') then
+            exit;
+
+        ReceiptScanAction := Enum::"STI Receipt Scan Action".FromInteger(ActionArgs.GetInteger('actionId'));
+        InitScanSession();
+        STIIReceiptScanActionProvider := ReceiptScanAction;
+        STIIReceiptScanActionProvider.ProcessReceiptScan();
+    end;
+
+    local procedure InitScanSession()
+    var
         ReceiptScanSessionGlobal: Codeunit STIReceiptScanSessionGlobal;
         ReceiptScanSessionLogMgt: Codeunit STIReceiptScanSessionLogMgt;
-        CameraPage: Page Camera;
-        LogId: Guid;
-        PictureBytes: InStream;
-        PictureName: Text;
-        ReceiptNotScannnedErrLabel: Label 'No receipt scanned';
     begin
         ReceiptScanSessionGlobal.ClearLogId();
-        LogId := ReceiptScanSessionLogMgt.InitLog();
-        ReceiptScanSessionGlobal.SetLogId(LogId);
+        ReceiptScanSessionGlobal.SetLogId(ReceiptScanSessionLogMgt.InitLog());
         Commit();
-
-        CameraPage.SetQuality(100);
-        CameraPage.RunModal();
-
-        ReceiptScanSessionLog.GetBySystemId(LogId);
-        if not ReceiptScanSessionLog.Result.HasValue then begin
-            ReceiptScanSessionLog.Delete(false);
-            Error(ReceiptNotScannnedErrLabel);
-        end;
-
-        // ReceiptScannerImpl.HandleRequest(Base64Convert.ToBase64(PictureBytes));
     end;
 
     internal procedure ProcessReceiptFromUrl(Url: Text)

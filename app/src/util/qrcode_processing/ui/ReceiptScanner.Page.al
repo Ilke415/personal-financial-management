@@ -24,7 +24,7 @@ page 50101 "STI Receipt Scanner"
 
                     trigger OnScanRequestStart(Args: JsonObject; Result: JsonObject)
                     begin
-                        ReceiptScanner.ProcessReceiptScan();
+                        ReceiptScanner.ProcessReceiptScan(Args);
                     end;
 
                     trigger OnScanRequestFinish(Args: JsonObject; Result: JsonObject)
