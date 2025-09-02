@@ -3,32 +3,47 @@ namespace STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 using System.Text;
 using System.Device;
 using STIL.PersonalFinanceManager.Util.AddIns;
+using STIL.PersonalFinanceManager.Archive;
+using STIL.PersonalFinanceManager.Helper;
 
 codeunit 50102 "STI Receipt Scanner"
 {
     Access = Internal;
 
     var
-        QRCodeProcessorImpl: Codeunit "STI Receipt Scanner Impl.";
+        ReceiptScannerImpl: Codeunit "STI Receipt Scanner Impl.";
 
     internal procedure OnControlReady(Control: ControlAddIn "STI Receipt Scanner")
     begin
-        QRCodeProcessorImpl.OnControlReady(Control);
+        ReceiptScannerImpl.OnControlReady(Control);
     end;
 
-    internal procedure StartQRCodeScan()
+    internal procedure ProcessReceiptScan()
     var
-        Base64Convert: Codeunit "Base64 Convert";
-        Camera: Codeunit Camera;
+        ReceiptScanSessionLog: Record "STI Receipt Scan Session Log";
+        ReceiptScanSessionGlobal: Codeunit STIReceiptScanSessionGlobal;
+        ReceiptScanSessionLogMgt: Codeunit STIReceiptScanSessionLogMgt;
+        CameraPage: Page Camera;
+        LogId: Guid;
         PictureBytes: InStream;
         PictureName: Text;
-        CameraPage: Page Camera;
+        ReceiptNotScannnedErrLabel: Label 'No receipt scanned';
     begin
-        // TODO: Create your own camera page and use it here instead of the default one.
-        if not Camera.GetPicture(PictureBytes, PictureName) then
-            exit;
+        ReceiptScanSessionGlobal.ClearLogId();
+        LogId := ReceiptScanSessionLogMgt.InitLog();
+        ReceiptScanSessionGlobal.SetLogId(LogId);
+        Commit();
 
-        QRCodeProcessorImpl.ScanQRCode(Base64Convert.ToBase64(PictureBytes));
+        CameraPage.SetQuality(100);
+        CameraPage.RunModal();
+
+        ReceiptScanSessionLog.GetBySystemId(LogId);
+        if not ReceiptScanSessionLog.Result.HasValue then begin
+            ReceiptScanSessionLog.Delete(false);
+            Error(ReceiptNotScannnedErrLabel);
+        end;
+
+        // ReceiptScannerImpl.HandleRequest(Base64Convert.ToBase64(PictureBytes));
     end;
 
     internal procedure ProcessReceiptFromUrl(Url: Text)

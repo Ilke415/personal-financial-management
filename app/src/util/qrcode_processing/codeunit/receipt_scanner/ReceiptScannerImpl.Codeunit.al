@@ -19,14 +19,14 @@ codeunit 50104 "STI Receipt Scanner Impl."
         QRCodeProcessorControl.Initiliaze();
     end;
 
-    internal procedure ScanQRCode(ImageBase64Text: Text)
+    internal procedure HandleRequest(ImageBase64Text: Text)
     var
         Args: JsonObject;
         Result: JsonObject;
     begin
         // Args.Add('content', ImageBase64Text);
         Message('ImageBase64Text: %1', ImageBase64Text);
-        Handler.HandleRequest(Args, Result);
+        // Handler.HandleRequest(Args, Result);
     end;
 
     local procedure InitiliazeHandler(HandlerIn: Interface "STI IUIRequestHandler")

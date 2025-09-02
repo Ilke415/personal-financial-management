@@ -12,18 +12,20 @@ pageextension 50100 "STI Camera" extends Camera
         {
             group("STI General")
             {
-                Caption = 'Camera';
+                Caption = '';
+
                 usercontrol("STI QR Code Scanner"; "STI QR Code Scanner")
                 {
                     ApplicationArea = All;
+
                     trigger OnControlReady()
                     begin
                         QRCodeScanner.OnControlReady(CurrPage."STI QR Code Scanner");
                     end;
 
-                    trigger OnFinishQRCodeScan(Result: JsonObject)
+                    trigger OnScanRequestFinish(Result: JsonObject)
                     begin
-                        ScanResult := Result;
+                        QRCodeScanner.ProcessScanResult(Result);
                         CurrPage.Close();
                     end;
                 }
@@ -31,12 +33,6 @@ pageextension 50100 "STI Camera" extends Camera
         }
     }
 
-    internal procedure STILGetScanResult(ScanResultOut: JsonObject)
-    begin
-        ScanResultOut := ScanResult;
-    end;
-
     var
         QRCodeScanner: Codeunit "STI QR Code Scanner";
-        ScanResult: JsonObject;
 }

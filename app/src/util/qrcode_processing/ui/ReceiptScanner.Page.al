@@ -19,23 +19,22 @@ page 50101 "STI Receipt Scanner"
                 {
                     trigger OnControlReady()
                     begin
-                        QRCodeProcessor.OnControlReady(CurrPage."STI Receipt Scanner");
+                        ReceiptScanner.OnControlReady(CurrPage."STI Receipt Scanner");
                     end;
 
-                    trigger OnStartQRCodeScan(Args: JsonObject; Result: JsonObject)
+                    trigger OnScanRequestStart(Args: JsonObject; Result: JsonObject)
                     begin
-                        // TODO: Add additional enum parameter to determine if the scan is for a QR code or URL
-                        QRCodeProcessor.StartQRCodeScan();
+                        ReceiptScanner.ProcessReceiptScan();
                     end;
 
-                    trigger OnFinishQRCodeScan(Args: JsonObject; Result: JsonObject)
+                    trigger OnScanRequestFinish(Args: JsonObject; Result: JsonObject)
                     begin
-                        QRCodeProcessor.ProcessReceiptFromUrl('');
+                        ReceiptScanner.ProcessReceiptFromUrl('');
                     end;
                 }
             }
         }
     }
     var
-        QRCodeProcessor: Codeunit "STI Receipt Scanner";
+        ReceiptScanner: Codeunit "STI Receipt Scanner";
 }

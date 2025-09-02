@@ -14,6 +14,6 @@ controladdin "STI QR Code Scanner"
     VerticalStretch = false;
 
     event OnControlReady();
-    event OnFinishQRCodeScan(Result: JsonObject);
+    event OnScanRequestFinish(Result: JsonObject);
     procedure Initiliaze();
 }

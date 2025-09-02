@@ -4,7 +4,7 @@ function Initiliaze() {
   
   const  scanQRCodeImage = document.createElement("img");
   scanQRCodeImage.setAttribute("src", `${Microsoft.Dynamics.NAV.GetImageResource(
-    "./src/util/qrcodeprocessor/controladdin/qrcodeprocessor/assets/qr-code-scanner-icon.jpg")}`);
+    "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/qr-code-scanner-icon.jpg")}`);
   scanQRCodeImage.setAttribute("height", "75");
   scanQRCodeImage.setAttribute("id", "scanQRCodeImage");
   scanQRCodeImage.setAttribute("width", "75");
@@ -14,7 +14,7 @@ function Initiliaze() {
 
   const  scanFromURLImage = document.createElement("img");
   scanFromURLImage.setAttribute("src", `${Microsoft.Dynamics.NAV.GetImageResource(
-    "./src/util/qrcodeprocessor/controladdin/qrcodeprocessor/assets/url-icon.jpg")}`);
+    "./src/util/qrcode_processing/controladdin/receipt_scanner/assets/url-icon.jpg")}`);
   scanFromURLImage.setAttribute("height", "75");
   scanFromURLImage.setAttribute("id", "scanFromURLImage");
   scanFromURLImage.setAttribute("width", "75");
@@ -24,26 +24,5 @@ function Initiliaze() {
 }
 
 function OnScanFromImagesClick() {
-  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnStartQRCodeScan", [{}, {}]);
-}
-
-async function ScanQRCode(args, output) {
-   await ScanQRCodeImpl(args, output);
-}
-
-async function ScanQRCodeImpl(args, output) {
-  const go = new Go();
-  await WebAssembly.instantiateStreaming(
-    fetch(
-      Microsoft.Dynamics.NAV.GetImageResource(
-        "./src/util/qrcodeprocessor/controladdin/libs/readqr.lib.wasm"
-      )
-    ),
-    go.importObject
-  ).then((result) => {
-    go.run(result.instance);
-    output = getQRCode(args.content, args.size);
-   
-    
-  });
+  Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestStart", [{}, {}]);
 }

@@ -39,10 +39,13 @@ function processFrame () {
   if (canvas === null) return;
   const ctx = canvas.getContext("2d", { willReadFrequently: true });
   ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-  readBarcodeFromCanvas(canvas).then(result => {
-    if (result.format) {
-      alert(result.format + ": " + escapeTags(result.text));
-      // drawResult(result, ctx);
+  readBarcodeFromCanvas(canvas).then(async result => {
+    if (result.content.format) {
+      const args = { format: result.content.format, content: escapeTags(result.content.text) , imageData: result.imageData};
+      const video = videoContainer.querySelector("video");
+      video.pause();
+      drawResult(result.content, ctx);
+      await Microsoft.Dynamics.NAV.InvokeExtensibilityMethod("OnScanRequestFinish", [args]);
     }
   });
 }
@@ -65,6 +68,7 @@ function readBarcodeFromCanvas(canvas) {
   var imgWidth = canvas.width;
   var imgHeight = canvas.height;
   var imageData = canvas.getContext("2d", { willReadFrequently: true }).getImageData(0, 0, imgWidth, imgHeight);
+  const base64Canvas = canvas.toDataURL("image/jpeg").split(';base64,')[1];
   var sourceBuffer = imageData.data;
   return ZXing().then(function (zxing) {
     if (zxing) {
@@ -72,7 +76,7 @@ function readBarcodeFromCanvas(canvas) {
       zxing.HEAPU8.set(sourceBuffer, buffer);
       var result = zxing.readBarcodeFromPixmap(buffer, imgWidth, imgHeight, true, "");
       zxing._free(buffer);
-      return result;
+      return { content: result, imageData: base64Canvas };
     } else {
       return { error: "ZXing not yet initialized" };
     }
