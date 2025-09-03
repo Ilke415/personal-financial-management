@@ -34,9 +34,9 @@ codeunit 50101 STIReceiptScanSessionLogMgt
         Clear(InStr);
         Clear(OutStr);
         TempBlob.CreateOutStream(OutStr);
-        OutStr.WriteText(Result);
+        OutStr.WriteText(SourceImage);
         TempBlob.CreateInStream(InStr);
-        ReceiptScanSessionLog."Source image".ImportStream(InStr, ReceiptScanSessionLog.FieldCaption("Source image"), MimeTypeTextLbl);
+        ReceiptScanSessionLog."Source Image".ImportStream(InStr, ReceiptScanSessionLog.FieldCaption("Source Image"), MimeTypeTextLbl);
         ReceiptScanSessionLog.Modify(false);
     end;
 

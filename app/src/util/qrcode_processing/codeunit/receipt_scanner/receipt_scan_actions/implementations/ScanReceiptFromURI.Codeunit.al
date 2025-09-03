@@ -1,6 +1,6 @@
 namespace STIL.PersonalFinanceManager.Util.Receipt.Scanner;
 
-using app.app;
+using STIL.PersonalFinanceManager.Util.UI;
 
 codeunit 50109 "STI ScanReceiptFromURI" implements STIIReceiptScanActionProvider
 {

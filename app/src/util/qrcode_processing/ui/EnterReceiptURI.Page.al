@@ -1,4 +1,4 @@
-namespace app.app;
+namespace STIL.PersonalFinanceManager.Util.UI;
 
 using System.Utilities;
 

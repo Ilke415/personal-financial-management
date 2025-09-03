@@ -23,9 +23,9 @@ table 50100 "STI Receipt Scan Session Log"
             Caption = 'Result';
             ToolTip = 'Result of the receipt qr code scan';
         }
-        field(40; "Source image"; Media)
+        field(40; "Source Image"; Media)
         {
-            Caption = 'Source image';
+            Caption = 'Source Image';
             ToolTip = 'QR code image of the receipt';
         }
         field(50; Status; Enum "STI Receipt Scan Status")

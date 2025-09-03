@@ -4,6 +4,9 @@ page 50102 "STI Receipt Scan Audit Log"
 {
     ApplicationArea = All;
     Caption = 'Receipt Scan Audit Log';
+    DeleteAllowed = false;
+    InsertAllowed = false;
+    ModifyAllowed = false;
     PageType = List;
     SourceTable = "STI Receipt Scan Session Log";
     UsageCategory = History;
@@ -19,6 +22,10 @@ page 50102 "STI Receipt Scan Audit Log"
                 field("Document No."; Rec."Document No.") { }
                 field("Document Type"; Rec."Document Type") { }
             }
+        }
+        area(FactBoxes)
+        {
+            part(ReceiptInformation; "STI Receipt Information") { SubPageLink = "Primary Key" = field("Primary Key"); }
         }
     }
 
